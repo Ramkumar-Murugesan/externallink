@@ -1,0 +1,15 @@
+<div *ngIf="isPopupModal" id="popupModal" class="modal" tabindex="-1" role="dialog" style="display: block">
+          <div class="modal-dialog modal-md" role="dialog">
+            <div class="modal-content">
+<div id='ixa8'>
+<ag-grid-angular #agGrid style="width: 100%; height: 100%;" id="myGrid" class="ag-theme-balham" [columnDefs]="columnDefs" [pagination]="true" [paginationPageSize]="paginationPageSize" [defaultColDef]="defaultColDef" [rowData]="rowData" [rowSelection]="rowSelection" (gridReady)="onGridReady($event)" domLayout='autoHeight'></ag-grid-angular>
+</div>
+<div class="modal-footer">
+              <div class="form-group">
+                <button type="button" class="btn button-create" (click)="submit()">ok</button>
+                <button type="button" class="btn button-close" (click)="cancel()">cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

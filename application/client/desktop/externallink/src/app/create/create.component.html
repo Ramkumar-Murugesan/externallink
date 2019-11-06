@@ -1,0 +1,31 @@
+<section id='i9rhx'>
+<div id='iltqe'>
+<h1 id='iw4jf'>
+Ticketing System
+</h1>
+<form class='form'>
+<div class='form-group'>
+<label>Name</label>
+<input class='form-control' placeholder='Type here your name' name='input_ihasa' id='ihasa' [(ngModel)]="ticket.name"/>
+</div>
+<div class='form-group'>
+<label id='i0vdf'>
+TicketNo
+</label>
+<input class='form-control' type='text' placeholder='Type here your ticket number' name='input_icd3h' [(ngModel)]="ticket.ticketNo"/>
+</div>
+<div class='form-group'>
+<label>Message</label>
+<textarea class='form-control' name='textbox_iv9li' [(ngModel)]="ticket.message"></textarea>
+</div>
+<div class='form-group'>
+<button class='btn btn-primary' type='submit' id='indpz' (click)="GpCreate()">Save</button>
+<div id='iv4c2'>
+<button class='btn btn-primary' (click)="popupModal()">Open Popup Modal
+      </button>
+</div>
+</div>
+</form>
+</div>
+</section>
+<app-popup [isPopupModal]="isPopupModal" (popupData)="popupData($event)" (cancelPopup)="cancelPopup($event)"></app-popup>

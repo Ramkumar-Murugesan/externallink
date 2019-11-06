@@ -1,0 +1,7 @@
+{
+  "name": "externallink",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
