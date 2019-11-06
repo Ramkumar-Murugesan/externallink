@@ -33,14 +33,13 @@ categories = {
    name: '',
    parent_id: ''
 };
-categoriesList;;
 
   constructor(
 private popupService: PopupService
   ) { }
 
   ngOnInit() {
-    this.GpGetNounById();
+    this.GpGetAllValues();
   }
 
 onGridReady(params) {
@@ -54,15 +53,15 @@ this.popupData.emit({ data: this.gridApi.getSelectedRows()[0], isPopupModal: fal
 cancel(event) {
 this.cancelPopup.emit(false);
 }
-GpGetNounById() {
- this.popupService.GpGetNounById(queryId)
+GpGetAllValues() {
+ this.popupService.GpGetAllValues()
   .subscribe(
     data => {
-       console.log('successfully get the data by id --- ', data);
-   this.categoriesList = data.categories;
+       console.log('successfully get all data --- ', data);
+       this.rowData = data.categories;
     },
     error => {
-       console.log('cannot able to get the data using its id--- ', error);
+       console.log('cannot able to get all data --- ', error);
     }
     );
 }

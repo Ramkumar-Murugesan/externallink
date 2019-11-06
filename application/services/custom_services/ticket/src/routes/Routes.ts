@@ -11,7 +11,8 @@ export class Routes {
                 status: 'up'
             })
         })
-        app.route('/ticket/save').post(this.ticket.GpCreate);
+        app.route('/ticket/get/:id').get(this.ticket.GpGetNounById);
+app.route('/ticket/save').post(this.ticket.GpCreate);
      }
 
 }

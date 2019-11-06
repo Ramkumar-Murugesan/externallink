@@ -12,7 +12,7 @@ export class PopupService {
 private http: HttpClient
   ) { }
 
-GpGetNounById(category_id): Observable<any> {
+GpGetAllValues(category_id): Observable<any> {
  return this.http.get(`/api.stlouisfed.org/fred/category/related?api_key=1d6109900692021b3c0e18d9a1c9591f&category_id=32073&file_type=json`);
 }
 

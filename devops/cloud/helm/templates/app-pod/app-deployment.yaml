@@ -66,7 +66,7 @@ spec:
           image: {{ .Values.deployment.ticket.image }}
           ports:
             - name: http-port
-              containerPort: 8001
+              containerPort: 8002
           env:
             - name: {{ .Values.app.prefix }}-app-db
               value: {{ .Values.app.prefix }}-app-db

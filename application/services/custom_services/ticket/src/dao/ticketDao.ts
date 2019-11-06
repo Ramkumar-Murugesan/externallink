@@ -7,7 +7,16 @@ export class ticketDao {
     private ticket = ticketModel;
     constructor() { }
     
-    public GpCreate(ticketData, callback){
+    public GpGetNounById(ticketId, callback){
+new CustomLogger().showLogger('info', 'Enter into ticketDao.ts: GpGetNounById')
+
+this.ticket.findById(ticketId).then((result)	=>	{
+new CustomLogger().showLogger('info', 'Exit from ticketDao.ts: GpGetNounById');
+callback(result);
+}).catch((error)=>{
+callback(error);
+});}
+public GpCreate(ticketData, callback){
 new CustomLogger().showLogger('info', 'Enter into ticketDao.ts: GpCreate')
 let temp = new ticketModel(ticketData);
 temp.save().then((result)	=>	{
